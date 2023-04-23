@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background: url("./../assets/images/background.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.main-section {
+  background-color: hsl(0, 0%, 94%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  box-shadow: hsl(0, 1%, 44%) 0px 10px 20px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  width: 60%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  border-radius: 10px 10px 25% 10px;
+  padding: 2em;
+}
+
+.button {
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  padding: 10px;
+  display: block;
+  float: right;
+}
+
+.button:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  height: 1px;
+  width: 500px;
+}
+
+.result {
+  padding: 10px;
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-bottom: 10%;
+}
+
+.result span {
+  color: hsl(259, 100%, 65%);
+}
+
+form input {
+  all: unset;
+  font-size: 32px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 10px;
+  text-align: left;
+  padding-left: 15%;
+}
+
+form input:focus {
+  border-color: hsl(259, 100%, 65%);
+  cursor: pointer;
+}
+
+form label {
+  text-align: left;
+  padding-left: 15%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: hsl(0, 1%, 44%);
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  gap: 8%;
+  padding-top: 10%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.error {
+  color: hsl(0, 100%, 67%);
+  position: absolute;
+  top: 100%; /* set the same height as the container */
+  left: 0;
+}
+
+.red-border {
+  border-color: hsl(0, 100%, 67%);
+}
+
+.red-text {
+  color: hsl(0, 100%, 67%);
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    overflow-y: hidden;
+  }
+
+  body {
+    background: none;
+    overflow-y: hidden;
+    max-height: 100vh;
+  }
+
+  #root {
+    padding: 0;
+  }
+
+  .main-section {
+    height: 100vh;
+    box-shadow: none;
+  }
+
+  .card {
+    width: 95%;
+    justify-content: center;
+    padding: 1em;
+    gap: 10%;
+  }
+
+  form {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  form label {
+    padding: 0;
+  }
+
+  form input {
+    width: 90%;
+    font-size: 24px;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20%;
+  }
+
+  .result {
+    font-size: 3.5rem;
+    padding: 0;
+  }
+
+  .result span {
+    font-size: 3.5rem;
+  }
+}
